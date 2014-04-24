@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Exchange" representedClassName="Exchange" syncable="YES">
+        <attribute name="closeTime" attributeType="Date" syncable="YES"/>
+        <attribute name="exchangeCode" attributeType="String" syncable="YES"/>
+        <attribute name="exchangeName" attributeType="String" syncable="YES"/>
+        <attribute name="openTime" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Industry" representedClassName="Industry" syncable="YES">
+        <attribute name="industryCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="industryName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Investments" representedClassName="Investments" syncable="YES">
+        <attribute name="fromTimeStamp" attributeType="Date" syncable="YES"/>
+        <attribute name="shares" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="symbol" attributeType="String" syncable="YES"/>
+        <attribute name="toTimeStamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="symbolR" toMany="YES" deletionRule="Nullify" destinationEntity="Stock" syncable="YES"/>
+    </entity>
+    <entity name="Stock" representedClassName="Stock">
+        <attribute name="industryCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="marketCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stockName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stockType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="symbol" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="exchangeCodeR" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exchange" syncable="YES"/>
+        <relationship name="industryCodeR" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Industry" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="StockType" representedClassName="StockType" syncable="YES">
+        <attribute name="stockType" attributeType="String" syncable="YES"/>
+        <attribute name="stockTypeName" attributeType="String" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stock" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Exchange" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Industry" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Investments" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Stock" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="StockType" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
