@@ -2,7 +2,7 @@
 //  SPYahooGetIntraDayActivity.h
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 10/2/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 

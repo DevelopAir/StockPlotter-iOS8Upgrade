@@ -2,7 +2,7 @@
 //  UIApplication+SPAppDimensions.m
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 9/28/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 

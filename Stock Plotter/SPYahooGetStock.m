@@ -2,7 +2,7 @@
 //  SPYahooGetStock.m
 //  StockPlotter
 //
-//  Created by Paul Duncanson on 9/22/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 
@@ -180,7 +180,7 @@ NSTimeInterval timeIntervalForNumberOfWeeks(float numberOfWeeks)
     [self setDelegate:nil];
 }
 
-//    
+//
 -(NSString *)URL
 {
     unsigned int unitFlags = NSMonthCalendarUnit | NSDayCalendarUnit | NSYearCalendarUnit;

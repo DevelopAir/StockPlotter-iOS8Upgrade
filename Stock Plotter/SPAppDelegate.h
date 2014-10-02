@@ -2,13 +2,12 @@
 //  SPAppDelegate.h
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 9/23/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "TestFlight.h"
 #import "SPMasterViewController.h"
 #import "Stock.h"
 #import "Exchange.h"

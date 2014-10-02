@@ -2,7 +2,7 @@
 //  SPDetailViewController.m
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 9/22/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 
@@ -26,7 +26,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
 	
 	NSRange foundRange = [searchIn rangeOfString:searchFor options:0  range:searchRange];
 	if(foundRange.length > 0){
-		retVal = foundRange.location;
+		retVal = (int)foundRange.location;
 	}else{
 		retVal = -1;
 	}
@@ -82,7 +82,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
 </table>
 ----------------------------------------------------------------------------*/
 // Note:  Never call scrapeHoldings from the main thread on account of web page retrieval delay.
-//        Verify any web scraping maintenance issues with above sample listing and for maintenance purposes please keep sample listing up to date.
+//        Verify any web scraping maintenance issues with above sample listing and please keep this sample listing up to date.
 
 -(void)scrapeHoldings:(NSString *)selectedETF {
 
@@ -309,7 +309,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
  </tr></tbody></table></div>
 ---------------------------------------------------------------------------------*/
 // Note:  Never call scrapeSummary from the main thread on account of web page retrieval delay.
-//        Verify any web scraping maintenance issues with above sample listing and for maintenance purposes please keep sample listing up to date.
+//        Verify any web scraping maintenance issues with above sample listing and please keep this sample listing up to date.
 
 -(void)scrapeSummary:(NSString *)selectedETF {
     
@@ -637,7 +637,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
                     startTime = [NSDate dateWithTimeIntervalSinceNow:-60.0 * 60.0 * 24.0 * 7.0 * 52.0];
                     break;
                 default: // "1w"
-                    NSLog(@"||Invalid index for graph zoom selector is %d", [graphZoomSelector selectedSegmentIndex]);
+                    NSLog(@"||Invalid index for graph zoom selector is %ld", (long)[graphZoomSelector selectedSegmentIndex]);
                     startTime = [NSDate dateWithTimeIntervalSinceNow:-60.0 * 60.0 * 24.0 * 7.0];
                     break;
             }
@@ -766,7 +766,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
         NSLog(@"Not enouph points to plot");
         return;
     } else {
-        NSLog(@"In drawIntraDayGraph to plot %d points", [activityPuller.activityValue count] - 1);
+        NSLog(@"In drawIntraDayGraph to plot %u points", [activityPuller.activityValue count] - 1);
     }
     
     lineShape.lineWidth = 2.0f;
@@ -778,11 +778,11 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
     // Compute range of values to determine where to position first point
     double overallHigh;
     double overallLowestHigh;
-    int limit = [activityPuller.activityValue count];
+    unsigned long limit = [activityPuller.activityValue count];
     eachHigh = [[[activityPuller.activityValue objectAtIndex:0] objectForKey:@"high"] doubleValue];
     overallHigh = eachHigh;
     overallLowestHigh = eachHigh;
-    for (int j = 1; j < limit; j++) {
+    for (unsigned long j = 1; j < limit; j++) {
         eachHigh = [[[activityPuller.activityValue objectAtIndex:j] objectForKey:@"high"] doubleValue];
         
         if (overallHigh < eachHigh) {
@@ -899,7 +899,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
         NSLog(@"Not enouph points to plot");
         return;
     } else {
-        NSLog(@"In drawGraph to plot %d points", [stockPuller.tradingValue count] - 1);
+        NSLog(@"In drawGraph to plot %u points", [stockPuller.tradingValue count] - 1);
     }
     
     lineShape.lineWidth = 2.0f;
@@ -911,7 +911,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
     // Compute range of values to determine where to position first point
     double overallHigh;
     double overallLowestHigh;
-    int limit = [stockPuller.tradingValue count];
+    int limit = (int)[stockPuller.tradingValue count];
     eachHigh = [[[stockPuller.tradingValue objectAtIndex:0] objectForKey:@"high"] doubleValue];
     overallHigh = eachHigh;
     overallLowestHigh = eachHigh;
@@ -928,7 +928,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
     
     int i, x;
     
-    i = [stockPuller.tradingValue count] - 1; 
+    i = (int)[stockPuller.tradingValue count] - 1;
 
     double eachWidthOfPoint;
     if (limit <= widthOfGraph) {
@@ -1052,12 +1052,18 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
     [self updateLayoutForNewOrientation: self.interfaceOrientation];
 }
 
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    self.scrollView.contentSize = self.contentView.frame.size;
+}
+
 //Action method executes when user touches the graph zoom selector bar
 -(void) pickOne:(id)sender
 {
     if (zoomSelection != [sender selectedSegmentIndex]) {
         graphZoomSelector = (UISegmentedControl *)sender;
-        zoomSelection = [sender selectedSegmentIndex];
+        zoomSelection = (int)[sender selectedSegmentIndex];
         [self reloadData];
     }
 }
@@ -1083,10 +1089,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
 {
 }
 
-#pragma mark -
-#pragma mark Plot Data Source Methods
-
-#pragma mark activityPullerCallBacks
+#pragma mark activityPuller call backs
 
 -(void)activityPuller:(SPYahooGetIntraDayActivity *)dp downloadDidFailWithError:(NSError *)error
 {
@@ -1132,7 +1135,7 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
     }
 }
 
-#pragma mark stockPullerCallBacks
+#pragma mark stockPuller call backs
 
 -(void)stockPuller:(SPYahooGetStock *)dp downloadDidFailWithError:(NSError *)error
 {
@@ -1201,11 +1204,14 @@ int instr(NSString *searchFor, NSString *searchIn, int startingAt) {
     CGSize viewAreaSize = [UIApplication viewSize];
     
     self.scrollView.contentSize = CGSizeMake(viewAreaSize.width, 1800);
+    
+    NSLog(@"updateLayoutForNewOrientation self.scrollView.contentSize width/height is %f/%f\n", self.scrollView.contentSize.width, self.scrollView.contentSize.height);
     graphZoomSelector.frame = CGRectMake(0, 285, viewAreaSize.width, 50);
     
     CGPoint c;
     
-    if (viewAreaSize.width <= 320) {
+    if (orientation == UIDeviceOrientationPortrait ||
+        orientation == UIDeviceOrientationPortraitUpsideDown) { // Width is 320
         c = _percentOfGrowth.center;
         c.x = 252;
         _percentOfGrowth.center = c;

@@ -2,7 +2,7 @@
 //  SPActivityValue.m
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 10/3/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 

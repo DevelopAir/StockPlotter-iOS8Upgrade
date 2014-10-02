@@ -2,7 +2,7 @@
 //  SPMasterViewController.m
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 9/22/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 
@@ -162,6 +162,14 @@
         case NSFetchedResultsChangeDelete:
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
+            
+        case NSFetchedResultsChangeMove:
+            NSLog(@"Switch statement returned an unexpected value of NSFetchedResultsChangeMove.\n");
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            NSLog(@"Switch statement returned an unexpected value of NSFetchedResultsChangeUpdate.\n");
+            break;
     }
 }
 
@@ -246,7 +254,7 @@
 -(void)reloadData
 {    
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    [standardDefaults registerDefaults:@{@"investmentList": @"VOO|VB|VWO|VNQ|CORP|GOVT"}];
+    [standardDefaults registerDefaults:@{@"investmentList": @"VOO|VB|VWO|VNQ|AAPL|CORP|GOVT"}];
     [standardDefaults synchronize];
     
     NSString *symbolParm = [standardDefaults stringForKey:@"investmentList"];
@@ -298,7 +306,7 @@
 { 
     NSLog(@"in -fundamentalsPuller, returned = %@", dp);
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    [standardDefaults registerDefaults:@{@"investmentList": @"VOO|VB|VWO|VNQ|CORP|GOVT"}];
+    [standardDefaults registerDefaults:@{@"investmentList": @"VOO|VB|VWO|VNQ|AAPL|CORP|GOVT"}];
     
     NSString *listOfETFs;
     NSDictionary *fundamentalsDict;
@@ -326,8 +334,6 @@
     [[NSUserDefaults standardUserDefaults] setObject:dp.fundamentals forKey:@"fundamentals"];
         
     [standardDefaults synchronize];
-    
-    //[self reloadData];
 }
 
 -(void)setfundamentalsPuller:(SPYahooGetFundamentals *)afundamentalsPuller

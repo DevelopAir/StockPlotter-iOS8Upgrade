@@ -72,14 +72,14 @@
                         <viewControllerLayoutGuide type="bottom" id="eep-Zx-9ds"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="64" width="320" height="1736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="9796"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQB-bT-bZN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="9796"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="1800" translatesAutoresizingMaskIntoConstraints="NO" id="4sD-bL-mJ5">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1736"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="1800" translatesAutoresizingMaskIntoConstraints="NO" id="4sD-bL-mJ5">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1800"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="11:44" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqH-V5-kCa">
                                                 <rect key="frame" x="223" y="256" width="77" height="20"/>
@@ -479,7 +479,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="account status" id="cT9-cg-tjC"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1800"/>
+                    <size key="freeformSize" width="320" height="9860"/>
                     <connections>
                         <outlet property="betaOrDividendAndYield" destination="C6M-l7-glQ" id="s1h-Tb-QLk"/>
                         <outlet property="contentView" destination="4sD-bL-mJ5" id="mqB-yF-fTy"/>
@@ -540,7 +540,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="64"/>
+            <point key="canvasLocation" x="929" y="-134"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

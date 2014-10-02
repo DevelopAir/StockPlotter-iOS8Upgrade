@@ -1,13 +1,17 @@
 //
-//  SPFundamentalValue.h
+//  Industry.m
 //  Stock Plotter
 //
 //  Created by Paul Duncanson.
 //  Copyright (c) 2013 Paul Duncanson. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "Industry.h"
 
-@interface SPFundamentalValue
- 
+
+@implementation Industry
+
+@dynamic industryCode;
+@dynamic industryName;
+
 @end

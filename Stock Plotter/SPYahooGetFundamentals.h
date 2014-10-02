@@ -2,7 +2,7 @@
 //  SPYahooGetFundamentals.h
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 9/29/13.
+//  Created by Paul Duncanson.
 //  Copyright (c) 2013 Paul Duncanson. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  SPYahooGetFundamentals.m
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 9/29/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 
@@ -301,7 +301,7 @@
             [newFundamentals addObject:currentFundamentals];
             
         } else if ([fieldValues count] > 11) {
-            int numberOfCommasInName = [fieldValues count] - 11;
+            unsigned long numberOfCommasInName = [fieldValues count] - 11;
             
             NSMutableDictionary *currentFundamentals = [[NSMutableDictionary alloc]initWithCapacity:11];
             [currentFundamentals setObject:fieldValues[10+numberOfCommasInName] forKey:@"returnYTD"];
@@ -316,7 +316,7 @@
             [currentFundamentals setObject:fieldValues[0]  forKey:@"symbol"];
             
             NSString *nameWithCommas = @"";
-            for (int j = 1; j <= (numberOfCommasInName + 1); j++) {
+            for (unsigned long j = 1; j <= (numberOfCommasInName + 1); j++) {
                 if (nameWithCommas.length > 0) {
                     nameWithCommas = [nameWithCommas stringByAppendingString:@","];
                 }

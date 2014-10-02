@@ -2,7 +2,7 @@
 //  SPAppDelegate.m
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 9/22/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 
@@ -19,8 +19,7 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 
     //UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    [TestFlight takeOff:@"8d78796d-4acb-4639-a7e3-89f71a8d0230"];
-    //[TestFlight takeOff:@"dc0a9a72-416c-41ff-9a57-cabe53dd7438"];
+    //[TestFlight takeOff:@"8d78796d-4acb-4639-a7e3-89f71a8d0230"];
     
     //SPMasterViewController *controller = (SPMasterViewController *)navigationController.topViewController;
     

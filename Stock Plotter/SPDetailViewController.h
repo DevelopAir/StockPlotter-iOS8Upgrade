@@ -2,7 +2,7 @@
 //  SPDetailViewController.h
 //  Stock Plotter
 //
-//  Created by Paul Duncanson on 9/22/13.
+//  Created by Paul Duncanson.
 //  Change History:
 //
 
@@ -48,6 +48,8 @@
 -(void)activityPuller:(SPYahooGetIntraDayActivity *)dp downloadDidFailWithError:(NSError *)error;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @property (weak, nonatomic) IBOutlet UILabel *descriptionETF;
 

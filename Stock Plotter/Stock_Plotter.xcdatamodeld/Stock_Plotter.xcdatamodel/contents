@@ -1,42 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13F34" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Exchange" representedClassName="Exchange" syncable="YES">
         <attribute name="closeTime" attributeType="Date" syncable="YES"/>
         <attribute name="exchangeCode" attributeType="String" syncable="YES"/>
         <attribute name="exchangeName" attributeType="String" syncable="YES"/>
         <attribute name="openTime" attributeType="Date" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stock" inverseName="exchangeCodeR" inverseEntity="Stock" syncable="YES"/>
     </entity>
     <entity name="Industry" representedClassName="Industry" syncable="YES">
         <attribute name="industryCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="industryName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stock" inverseName="industryCodeR" inverseEntity="Stock" syncable="YES"/>
     </entity>
     <entity name="Investments" representedClassName="Investments" syncable="YES">
         <attribute name="fromTimeStamp" attributeType="Date" syncable="YES"/>
+        <attribute name="investmentSymbol" attributeType="String" syncable="YES"/>
         <attribute name="shares" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="symbol" attributeType="String" syncable="YES"/>
         <attribute name="toTimeStamp" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="symbolR" toMany="YES" deletionRule="Nullify" destinationEntity="Stock" syncable="YES"/>
     </entity>
     <entity name="Stock" representedClassName="Stock">
+        <attribute name="exchangeCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="industryCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="marketCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stockName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stockSymbol" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stockType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="symbol" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="exchangeCodeR" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exchange" syncable="YES"/>
-        <relationship name="industryCodeR" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Industry" syncable="YES"/>
+        <relationship name="exchangeCodeR" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exchange" inverseName="relationship" inverseEntity="Exchange" syncable="YES"/>
+        <relationship name="industryCodeR" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Industry" inverseName="relationship" inverseEntity="Industry" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StockType" inverseName="stockSymbolR" inverseEntity="StockType" syncable="YES"/>
         <userInfo/>
     </entity>
     <entity name="StockType" representedClassName="StockType" syncable="YES">
         <attribute name="stockType" attributeType="String" syncable="YES"/>
         <attribute name="stockTypeName" attributeType="String" syncable="YES"/>
-        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stock" syncable="YES"/>
+        <relationship name="stockSymbolR" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stock" inverseName="relationship" inverseEntity="Stock" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Exchange" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Industry" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Investments" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Stock" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="StockType" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Exchange" positionX="-549" positionY="63" width="128" height="118"/>
+        <element name="Industry" positionX="-398" positionY="153" width="128" height="88"/>
+        <element name="Investments" positionX="-45" positionY="-45" width="128" height="103"/>
+        <element name="Stock" positionX="-216" positionY="-9" width="128" height="178"/>
+        <element name="StockType" positionX="-416" positionY="-16" width="128" height="88"/>
     </elements>
 </model>
