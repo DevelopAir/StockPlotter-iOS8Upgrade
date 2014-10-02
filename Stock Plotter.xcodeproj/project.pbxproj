@@ -10,6 +10,11 @@
 		E526AD801813BDF0008FB02F /* Stock_Plotter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E526AD7E1813BDF0008FB02F /* Stock_Plotter.xcdatamodeld */; };
 		E54E6ACA1832B7EA0060269F /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54E6AC91832B7EA0060269F /* iAd.framework */; };
 		E550E07217FD3FBD0032BD38 /* SPYahooGetIntraDayActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E550E07117FD3FBD0032BD38 /* SPYahooGetIntraDayActivity.m */; };
+		E551F6D419DD334A00C56E6F /* Exchange.m in Sources */ = {isa = PBXBuildFile; fileRef = E551F6CB19DD334A00C56E6F /* Exchange.m */; };
+		E551F6D519DD334A00C56E6F /* Industry.m in Sources */ = {isa = PBXBuildFile; fileRef = E551F6CD19DD334A00C56E6F /* Industry.m */; };
+		E551F6D619DD334A00C56E6F /* Investments.m in Sources */ = {isa = PBXBuildFile; fileRef = E551F6CF19DD334A00C56E6F /* Investments.m */; };
+		E551F6D719DD334A00C56E6F /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = E551F6D119DD334A00C56E6F /* Stock.m */; };
+		E551F6D819DD334A00C56E6F /* StockType.m in Sources */ = {isa = PBXBuildFile; fileRef = E551F6D319DD334A00C56E6F /* StockType.m */; };
 		E57E5110180F77E800BB6AFB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57E510F180F77E800BB6AFB /* CoreData.framework */; };
 		E5AF67A517F1524F007F5724 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5AF67A417F1524F007F5724 /* UIKit.framework */; };
 		E5AF67A717F1524F007F5724 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5AF67A617F1524F007F5724 /* Foundation.framework */; };
@@ -26,15 +31,9 @@
 		E5AF67CC17F18655007F5724 /* SPYahooGetStock.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AF67CB17F18655007F5724 /* SPYahooGetStock.m */; };
 		E5AF67CF17F1866E007F5724 /* SPStockValue.m in Sources */ = {isa = PBXBuildFile; fileRef = E5AF67CE17F1866E007F5724 /* SPStockValue.m */; };
 		E5AF67D317F1886B007F5724 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5AF67D217F1886B007F5724 /* QuartzCore.framework */; };
-		E5BE8D8418047095004F0816 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BE8D8218046ECE004F0816 /* libTestFlight.a */; };
 		E5BE8D86180470E1004F0816 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BE8D85180470E1004F0816 /* libz.dylib */; };
 		E5D0D0FD17F6E29200CC3842 /* UIApplication+SPAppDimensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D0D0FC17F6E29200CC3842 /* UIApplication+SPAppDimensions.m */; };
 		E5D0D10117F8297F00CC3842 /* SPYahooGetFundamentals.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D0D10017F8297F00CC3842 /* SPYahooGetFundamentals.m */; };
-		E5DBF3C318257DFD0042650E /* Exchange.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBF3C218257DFD0042650E /* Exchange.m */; };
-		E5DBF3C618257DFE0042650E /* Industry.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBF3C518257DFE0042650E /* Industry.m */; };
-		E5DBF3C918257DFE0042650E /* Investments.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBF3C818257DFE0042650E /* Investments.m */; };
-		E5DBF3CC18257DFF0042650E /* StockType.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBF3CB18257DFF0042650E /* StockType.m */; };
-		E5DBF3CF18257DFF0042650E /* Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DBF3CE18257DFF0042650E /* Stock.m */; };
 		E5E15DC9180ABE1900B5BCEF /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E15DC4180ABE1900B5BCEF /* TFHpple.m */; };
 		E5E15DCA180ABE1900B5BCEF /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E15DC6180ABE1900B5BCEF /* TFHppleElement.m */; };
 		E5E15DCB180ABE1900B5BCEF /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E15DC8180ABE1900B5BCEF /* XPathQuery.m */; };
@@ -48,6 +47,16 @@
 		E54E6AC91832B7EA0060269F /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		E550E07017FD3FBD0032BD38 /* SPYahooGetIntraDayActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPYahooGetIntraDayActivity.h; sourceTree = "<group>"; };
 		E550E07117FD3FBD0032BD38 /* SPYahooGetIntraDayActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPYahooGetIntraDayActivity.m; sourceTree = "<group>"; };
+		E551F6CA19DD334A00C56E6F /* Exchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Exchange.h; path = "Stock Plotter/CoreData/Exchange.h"; sourceTree = "<group>"; };
+		E551F6CB19DD334A00C56E6F /* Exchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Exchange.m; path = "Stock Plotter/CoreData/Exchange.m"; sourceTree = "<group>"; };
+		E551F6CC19DD334A00C56E6F /* Industry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Industry.h; path = "Stock Plotter/CoreData/Industry.h"; sourceTree = "<group>"; };
+		E551F6CD19DD334A00C56E6F /* Industry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Industry.m; path = "Stock Plotter/CoreData/Industry.m"; sourceTree = "<group>"; };
+		E551F6CE19DD334A00C56E6F /* Investments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Investments.h; path = "Stock Plotter/CoreData/Investments.h"; sourceTree = "<group>"; };
+		E551F6CF19DD334A00C56E6F /* Investments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Investments.m; path = "Stock Plotter/CoreData/Investments.m"; sourceTree = "<group>"; };
+		E551F6D019DD334A00C56E6F /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stock.h; path = "Stock Plotter/CoreData/Stock.h"; sourceTree = "<group>"; };
+		E551F6D119DD334A00C56E6F /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stock.m; path = "Stock Plotter/CoreData/Stock.m"; sourceTree = "<group>"; };
+		E551F6D219DD334A00C56E6F /* StockType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StockType.h; path = "Stock Plotter/CoreData/StockType.h"; sourceTree = "<group>"; };
+		E551F6D319DD334A00C56E6F /* StockType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StockType.m; path = "Stock Plotter/CoreData/StockType.m"; sourceTree = "<group>"; };
 		E57E510F180F77E800BB6AFB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E5AF67A117F1524F007F5724 /* Stock Plotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stock Plotter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5AF67A417F1524F007F5724 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -72,25 +81,11 @@
 		E5AF67CD17F1866E007F5724 /* SPStockValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPStockValue.h; sourceTree = "<group>"; };
 		E5AF67CE17F1866E007F5724 /* SPStockValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPStockValue.m; sourceTree = "<group>"; };
 		E5AF67D217F1886B007F5724 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		E5BE8D7E18046C8D004F0816 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
-		E5BE8D7F18046C8D004F0816 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
-		E5BE8D8018046C8D004F0816 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
-		E5BE8D8218046ECE004F0816 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = "Stock Plotter/libTestFlight.a"; sourceTree = "<group>"; };
 		E5BE8D85180470E1004F0816 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E5D0D0FB17F6E29200CC3842 /* UIApplication+SPAppDimensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+SPAppDimensions.h"; sourceTree = "<group>"; };
 		E5D0D0FC17F6E29200CC3842 /* UIApplication+SPAppDimensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+SPAppDimensions.m"; sourceTree = "<group>"; };
 		E5D0D0FF17F8297F00CC3842 /* SPYahooGetFundamentals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPYahooGetFundamentals.h; sourceTree = "<group>"; };
 		E5D0D10017F8297F00CC3842 /* SPYahooGetFundamentals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPYahooGetFundamentals.m; sourceTree = "<group>"; };
-		E5DBF3C118257DFC0042650E /* Exchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exchange.h; sourceTree = "<group>"; };
-		E5DBF3C218257DFD0042650E /* Exchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exchange.m; sourceTree = "<group>"; };
-		E5DBF3C418257DFE0042650E /* Industry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Industry.h; sourceTree = "<group>"; };
-		E5DBF3C518257DFE0042650E /* Industry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Industry.m; sourceTree = "<group>"; };
-		E5DBF3C718257DFE0042650E /* Investments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Investments.h; sourceTree = "<group>"; };
-		E5DBF3C818257DFE0042650E /* Investments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Investments.m; sourceTree = "<group>"; };
-		E5DBF3CA18257DFF0042650E /* StockType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockType.h; sourceTree = "<group>"; };
-		E5DBF3CB18257DFF0042650E /* StockType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockType.m; sourceTree = "<group>"; };
-		E5DBF3CD18257DFF0042650E /* Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stock.h; sourceTree = "<group>"; };
-		E5DBF3CE18257DFF0042650E /* Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stock.m; sourceTree = "<group>"; };
 		E5E15DC3180ABE1900B5BCEF /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHpple.h; path = "Stock Plotter/Hpple/TFHpple.h"; sourceTree = "<group>"; };
 		E5E15DC4180ABE1900B5BCEF /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHpple.m; path = "Stock Plotter/Hpple/TFHpple.m"; sourceTree = "<group>"; };
 		E5E15DC5180ABE1900B5BCEF /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHppleElement.h; path = "Stock Plotter/Hpple/TFHppleElement.h"; sourceTree = "<group>"; };
@@ -113,7 +108,6 @@
 				E57E5110180F77E800BB6AFB /* CoreData.framework in Frameworks */,
 				E5E15DCE180ABFB700B5BCEF /* libxml2.2.dylib in Frameworks */,
 				E5BE8D86180470E1004F0816 /* libz.dylib in Frameworks */,
-				E5BE8D8418047095004F0816 /* libTestFlight.a in Frameworks */,
 				E5AF67D317F1886B007F5724 /* QuartzCore.framework in Frameworks */,
 				E5AF67A517F1524F007F5724 /* UIKit.framework in Frameworks */,
 				E5AF67A717F1524F007F5724 /* Foundation.framework in Frameworks */,
@@ -148,7 +142,6 @@
 				E57E510F180F77E800BB6AFB /* CoreData.framework */,
 				E5E15DCD180ABFB700B5BCEF /* libxml2.2.dylib */,
 				E5BE8D85180470E1004F0816 /* libz.dylib */,
-				E5BE8D8218046ECE004F0816 /* libTestFlight.a */,
 				E5AF67D217F1886B007F5724 /* QuartzCore.framework */,
 				E5AF67A417F1524F007F5724 /* UIKit.framework */,
 				E5AF67A617F1524F007F5724 /* Foundation.framework */,
@@ -164,10 +157,9 @@
 				E5AF67BC17F1524F007F5724 /* MainStoryboard.storyboard */,
 				E5D0D0FE17F773C700CC3842 /* Categories */,
 				E5DBF3D018257EB30042650E /* CoreData */,
-				E5AF67D117F186CA007F5724 /* VCsAndDelegates */,
+				E5AF67D117F186CA007F5724 /* VCsAndAppDelegate */,
 				E5AF67D017F186A5007F5724 /* DataAcquisition */,
 				E5E15DCC180ABE3100B5BCEF /* Hipple */,
-				E5BE8D8118046CAD004F0816 /* TestFlight */,
 				E5AF67AB17F1524F007F5724 /* Supporting Files */,
 			);
 			path = "Stock Plotter";
@@ -206,7 +198,7 @@
 			name = DataAcquisition;
 			sourceTree = "<group>";
 		};
-		E5AF67D117F186CA007F5724 /* VCsAndDelegates */ = {
+		E5AF67D117F186CA007F5724 /* VCsAndAppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				E5AF67B317F1524F007F5724 /* SPAppDelegate.h */,
@@ -216,17 +208,7 @@
 				E5AF67C217F1524F007F5724 /* SPDetailViewController.h */,
 				E5AF67C317F1524F007F5724 /* SPDetailViewController.m */,
 			);
-			name = VCsAndDelegates;
-			sourceTree = "<group>";
-		};
-		E5BE8D8118046CAD004F0816 /* TestFlight */ = {
-			isa = PBXGroup;
-			children = (
-				E5BE8D7E18046C8D004F0816 /* TestFlight.h */,
-				E5BE8D7F18046C8D004F0816 /* TestFlight+AsyncLogging.h */,
-				E5BE8D8018046C8D004F0816 /* TestFlight+ManualSessions.h */,
-			);
-			name = TestFlight;
+			name = VCsAndAppDelegate;
 			sourceTree = "<group>";
 		};
 		E5D0D0FE17F773C700CC3842 /* Categories */ = {
@@ -241,16 +223,16 @@
 		E5DBF3D018257EB30042650E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				E5DBF3CD18257DFF0042650E /* Stock.h */,
-				E5DBF3CE18257DFF0042650E /* Stock.m */,
-				E5DBF3CA18257DFF0042650E /* StockType.h */,
-				E5DBF3CB18257DFF0042650E /* StockType.m */,
-				E5DBF3C718257DFE0042650E /* Investments.h */,
-				E5DBF3C818257DFE0042650E /* Investments.m */,
-				E5DBF3C418257DFE0042650E /* Industry.h */,
-				E5DBF3C518257DFE0042650E /* Industry.m */,
-				E5DBF3C118257DFC0042650E /* Exchange.h */,
-				E5DBF3C218257DFD0042650E /* Exchange.m */,
+				E551F6CA19DD334A00C56E6F /* Exchange.h */,
+				E551F6CB19DD334A00C56E6F /* Exchange.m */,
+				E551F6CC19DD334A00C56E6F /* Industry.h */,
+				E551F6CD19DD334A00C56E6F /* Industry.m */,
+				E551F6CE19DD334A00C56E6F /* Investments.h */,
+				E551F6CF19DD334A00C56E6F /* Investments.m */,
+				E551F6D019DD334A00C56E6F /* Stock.h */,
+				E551F6D119DD334A00C56E6F /* Stock.m */,
+				E551F6D219DD334A00C56E6F /* StockType.h */,
+				E551F6D319DD334A00C56E6F /* StockType.m */,
 			);
 			name = CoreData;
 			path = ..;
@@ -299,6 +281,11 @@
 				CLASSPREFIX = SP;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Paul Duncanson";
+				TargetAttributes = {
+					E5AF67A017F1524F007F5724 = {
+						DevelopmentTeam = 4N8855G4ZR;
+					};
+				};
 			};
 			buildConfigurationList = E5AF679C17F1524F007F5724 /* Build configuration list for PBXProject "Stock Plotter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -344,16 +331,16 @@
 				E5AF67C417F1524F007F5724 /* SPDetailViewController.m in Sources */,
 				E5AF67CC17F18655007F5724 /* SPYahooGetStock.m in Sources */,
 				E5AF67CF17F1866E007F5724 /* SPStockValue.m in Sources */,
-				E5DBF3CC18257DFF0042650E /* StockType.m in Sources */,
-				E5DBF3C618257DFE0042650E /* Industry.m in Sources */,
+				E551F6D519DD334A00C56E6F /* Industry.m in Sources */,
 				E5D0D0FD17F6E29200CC3842 /* UIApplication+SPAppDimensions.m in Sources */,
-				E5DBF3C318257DFD0042650E /* Exchange.m in Sources */,
-				E5DBF3C918257DFE0042650E /* Investments.m in Sources */,
+				E551F6D419DD334A00C56E6F /* Exchange.m in Sources */,
+				E551F6D619DD334A00C56E6F /* Investments.m in Sources */,
 				E5E15DCB180ABE1900B5BCEF /* XPathQuery.m in Sources */,
+				E551F6D819DD334A00C56E6F /* StockType.m in Sources */,
 				E5E15DC9180ABE1900B5BCEF /* TFHpple.m in Sources */,
-				E5DBF3CF18257DFF0042650E /* Stock.m in Sources */,
 				E5D0D10117F8297F00CC3842 /* SPYahooGetFundamentals.m in Sources */,
 				E5F201C417FD5870004FAC40 /* SPActivityValue.m in Sources */,
+				E551F6D719DD334A00C56E6F /* Stock.m in Sources */,
 				E5E2837517F8DCC4004CBFD8 /* SPFundamentalValue.m in Sources */,
 				E550E07217FD3FBD0032BD38 /* SPYahooGetIntraDayActivity.m in Sources */,
 				E526AD801813BDF0008FB02F /* Stock_Plotter.xcdatamodeld in Sources */,
@@ -441,7 +428,8 @@
 		E5AF67C817F1524F007F5724 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Paul Duncanson (H964Q576FA)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stock Plotter/Stock Plotter-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -451,7 +439,7 @@
 					"/Users/pduncanson/IOSDevelopment/iPhone/Acorns/StockPlotter/Stock\\ Plotter/Stock\\ Plotter",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "27FB4C10-7D2C-4A97-AEDB-86B1E40FF156";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -459,7 +447,8 @@
 		E5AF67C917F1524F007F5724 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Paul Duncanson (4N8855G4ZR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Stock Plotter/Stock Plotter-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
@@ -469,7 +458,7 @@
 					"/Users/pduncanson/IOSDevelopment/iPhone/Acorns/StockPlotter/Stock\\ Plotter/Stock\\ Plotter",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "27FB4C10-7D2C-4A97-AEDB-86B1E40FF156";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
